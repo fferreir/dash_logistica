@@ -18,8 +18,9 @@ cabecalho = html.H1("Modelo de Crescimento Logistico",className="bg-primary text
 
 descricao = dcc.Markdown(
     '''
-    Este exercício utilizou dados do seguinte artigo:
-> [Experimental Studies on the Struggle for Existence, G. F. GAUSE, Journal of Experimental Biology 1932 9: 389-402](https://jeb.biologists.org/content/9/4/389).
+    Este simulador representa o crescimento logístico. Os dados foram obtidos do seguinte artigo:
+ 
+    [Experimental Studies on the Struggle for Existence, G. F. GAUSE, Journal of Experimental Biology 1932 9: 389-402](https://jeb.biologists.org/content/9/4/389).
     ''', mathjax=True
 )
 
