@@ -72,7 +72,6 @@ $$N(t) = \frac{K}{1 + \left(\frac{K - N_0}{N_0}\right) e^{-r t}}$$
 
 ## 🚀 Principais Funcionalidades
 
-- **Identidade Visual Moderna:** Estilo consistente com [dash-sir](https://github.com/fferreir/dash-sir), tema Bootstrap Lumen e layout responsivo.
 - **Painel de Controles com Badges:** Sliders com leitura em tempo real para $r$, $K$ e $N_0$ de ambas as espécies.
 - **4 Cards de Métricas em Tempo Real (KPIs):**
   1. *Capacidade $K$ ($S. cerevisiae$)* e valor de referência de Gause.
