@@ -81,6 +81,7 @@ $$N(t) = \frac{K}{1 + \left(\frac{K - N_0}{N_0}\right) e^{-r t}}$$
 - **Alternância de Variável Visualizada:** Alternância instantânea entre a curva de biomassa $N(t)$ e a taxa de variação instantânea $\frac{dN}{dt}$.
 - **Elementos Didáticos no Gráfico:** Linhas de assíntota $K$, marcadores dos pontos de inflexão $K/2$ e pontos empíricos de Gause (1932).
 - **Documentação Teórica Integrada:** Accordion com formulação matemática, metodologia experimental e roteiro pedagógico de perguntas.
+- **Rodapé Institucional com Link para o GitHub:** Identificação do simulador e link direto para o repositório oficial de código aberto.
 
 ---
 
@@ -88,12 +89,22 @@ $$N(t) = \frac{K}{1 + \left(\frac{K - N_0}{N_0}\right) e^{-r t}}$$
 
 ```text
 dash_logistica/
-├── app.py              # Aplicação principal Dash, callbacks e simulação
+├── app.py                     # Ponto de entrada da aplicação Dash e rotas
 ├── assets/
-│   └── estilos.css     # Folha de estilos customizada (design system do dash-sir)
-├── requirements.txt    # Dependências do projeto
-├── README.md           # Documentação completa
-└── LICENSE             # Licença de uso
+│   └── estilos.css            # Folha de estilos customizados (Hero, KPIs, Sliders)
+├── pytest.ini                 # Configuração do executor de testes
+├── requirements.txt           # Dependências Python do projeto
+├── README.md                  # Documentação completa
+├── LICENSE                    # Licença de uso
+├── src/
+│   ├── __init__.py            # Módulo de inicialização do pacote
+│   ├── callbacks.py           # Callbacks reativos (gráficos, badges, simulação)
+│   ├── layout.py              # Interface visual, header, controles, acordeom e rodapé
+│   └── model.py               # EDOs, solução analítica, dados de Gause e métricas cinéticas
+└── tests/
+    ├── __init__.py            # Módulo de inicialização dos testes
+    ├── test_app.py            # Testes de integração de interface, rodapé e layout
+    └── test_model.py          # Testes unitários do modelo matemático e estabilidade
 ```
 
 ---
@@ -117,7 +128,12 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 4. Executar a aplicação
+### 4. Executar os testes automatizados
+```bash
+pytest
+```
+
+### 5. Executar a aplicação
 ```bash
 python app.py
 ```
